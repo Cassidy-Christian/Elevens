@@ -1,14 +1,41 @@
 # Elevens
 
-# Activity 9
+## Activity 5 Instructions
 
-Finally you get to write some code! Be sure to look at the provided `Card`, `Deck`, and `Board` classes before diving in to implement to functions in `ElevensBoard.java`. Knowing what information is available from what objects, and what useful functions you can call will make your job easier.
+Each of the folders Buggy1 through Buggy5 contain already compiled, runable code with logic errors, and the source files.
+Your job is to run the Tester programs, then correct the runtime problems that you encounter.
 
-### Aside
+To run the code, first move to the proper folder, then run the code normally (no need to compile the tester).
 
-The `CardGameGUI` class may look intimidating at first glance, and it is not something you need to change. It handles all of the graphics and interactions for the game so you can focus on writing the game algorithm itself.
+Example for Buggy1:
 
-Focus on `ElevensBoard` first, but if you would like to see an example of some next-level uses of object oriented design take a glance through it. It is not necessary to understand every line of code within it (or even most of it) to use it, or finish our assignment. Within, you may recognize some of the patterns you have already seen. Inheritance, interfaces, and composition are all used together to create the fairly complicated user interface with not very much code. Most of the problems it solves it does so by finding the right object to talk to, and sending that object the right message at the right time. This code is a reminder that there are still plenty of challenges left in your journey, should you choose to continue on with computer science.
+```
+ $ cd Buggy1
+ $ java DeckTester
+```
+
+You should see:
+
+```
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.elementData(ArrayList.java:418)
+	at java.util.ArrayList.get(ArrayList.java:431)
+	at Deck.deal(Deck.java:85)
+	at DeckTester.testEmpty(DeckTester.java:99)
+	at DeckTester.test1CardDeck(DeckTester.java:28)
+	at DeckTester.main(DeckTester.java:12)
+```
+
+Next, fix the error(s).
+
+Then compile and run as usual:
+
+```
+ $ javac DeckTester.java
+ $ java DeckTester
+```
+
+Continue until the code runs as expected.
 
 ## Submitting
 
@@ -18,8 +45,6 @@ $ git push origin a#
 ```
 
 ## Switching to the next activity
-
-Change the # to the number of the activity you want to grab.
 
 ```
 $ git fetch upstream a#
